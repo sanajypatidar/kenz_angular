@@ -1,0 +1,48 @@
+<div id="wrapper">
+  <app-sidebar></app-sidebar>
+
+  <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
+      <app-topbar></app-topbar>
+      <!-- modal -->
+      <div style="padding-left: 110px" class="top">
+        <!-- Modal -->
+
+        <!-- modal -->
+        <div>
+          <div class="col-md-4 col-md-offset-2">
+            <h3>User</h3>
+          </div>
+          <!-- <button type="button" class="btn btn-primary btn-sm">Add Product</button> -->
+        </div>
+
+        <div class="container col-md-10 col-md-offset-2">
+          <hr />
+
+          <div>
+            <table class="table table-striped">
+              <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Email</th>
+
+                <th>Address</th>
+              </tr>
+              <tr *ngFor="let u of user; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ u.name }}</td>
+                <td>{{ u.email }}</td>
+                <td>{{ u.address }}</td>
+              </tr>
+            </table>
+            <!-- <div *ngIf="loader_show">
+      <div class="loader centered"></div>
+      </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- // {{u.https://sheltered-woodland-33544.herokuapp.com/product_image/}}  -->
+</div>

@@ -1,0 +1,60 @@
+.nav_hover:hover {
+  color: #add1cd;
+}
+.nav_hover {
+  font-size: 16px;
+  color: white;
+}
+.lead {
+  font-size: 0.9rem;
+}
+.overlay-mf {
+  background-color: #eeeeee;
+}
+.ico-circle {
+  color: #c5dacd;
+}
+.icon_hover:hover {
+  color: white !important;
+  background-color: #708289;
+}
+.icon_hover {
+  color: #708289 !important;
+  background-color: #c5dacd;
+}
+.product_hover:hover {
+  opacity: 0.5;
+}
+.button_display {
+  display: none;
+}
+.footer1sec li {
+  text-align: center;
+}
+/* .nav-item {
+  padding-left: 30px;
+  padding-right: 30px;
+  white-space: nowrap;
+} */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .footer-center-img {
+    width: 92px;
+    padding-top: 90px;
+    margin-left: 31px;
+  }
+  .footer3sec li {
+    padding-top: 10px;
+    text-align: center;
+  }
+}
+@media only screen and (min-device-width: 1025px) {
+  .footer-center-img {
+    width: 92px;
+    padding-top: 90px;
+    margin-left: 31px;
+  }
+  .footer3sec li {
+    padding-top: 10px;
+    text-align: center;
+  }
+}

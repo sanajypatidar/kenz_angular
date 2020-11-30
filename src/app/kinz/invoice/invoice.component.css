@@ -1,0 +1,52 @@
+tr.bordered, td.bordered,th.bordered {
+    border-bottom: 1px solid #000;
+}
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+.header-margin {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.hr{
+  margin-bottom: 30px;
+  background-color: #bdc1c5;
+    height: 1px;
+}
+b.bold-name{
+  padding-right: 10px;
+}
+.bg-color{
+  background-color: #9124da;
+    width: 100%;
+    height: 40px;
+}
+td.manege-td {
+  text-align: left;
+    padding-left: 20px;
+    color: #141412c7;
+    font-weight: 600;
+}
+.tab-1 {
+    width: 449px;
+}
+.table-row{
+  background-color: #9124da;
+}
+.bill{
+  margin-bottom: 0px;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+@media print {
+  #Footer { display: none !important; }
+}

@@ -1,0 +1,140 @@
+.nav-lin {
+  color: white;
+}
+.nav-lin:hover {
+  color: #add1cd;
+}
+.overlay-mf {
+  background-color: #a4dad2;
+}
+.ico-circle {
+  color: #c5dacd;
+}
+.icon_hover:hover {
+  color: white !important;
+  background-color: #708289;
+}
+.icon_hover {
+  color: #708289 !important;
+  background-color: #c5dacd;
+}
+.button_display {
+  display: none;
+}
+h4 {
+  margin: 0px;
+}
+h3 {
+  margin: 0px;
+}
+.item-order1 p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+ul.ul-1 {
+  margin: 5px;
+}
+.item-order1 {
+  margin-bottom: 15px;
+}
+.btn-popup {
+  background-color: #fff;
+  color: #000000;
+  padding-left: 58px;
+}
+.btn-popup:hover {
+  background-color: #fff;
+}
+.heading-delet {
+  margin-top: 0px;
+}
+.step-wr1 {
+  padding: 0px;
+}
+
+.od {
+  padding: 0px;
+}
+h1.total-no {
+  margin: 0px;
+}
+@media screen and (min-width: 320px) and (max-width: 412px) {
+  .table td,
+  .table th {
+    padding: 6px 1px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 400px) and(max-width:400px) {
+  .all-order {
+    margin: 40px 0;
+  }
+  .all-order div.item-order1 {
+    width: calc(80% - 20px);
+    margin: 10px 48px;
+    height: 405px;
+  }
+  .step-wr h3 {
+    margin: 0px 10px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 600px) {
+  .all-order div.item-order1 {
+    width: calc(50% - 20px);
+    margin: 10px 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .all-order div.item-order1 {
+    width: calc(50% - 20px);
+    margin: 10px 10px;
+    height: 405px;
+  }
+  .clearfix .item-order1 p {
+    margin-top: 10px;
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1024) {
+  .all-order div.item-order1 {
+    width: calc(50% - 20px);
+    margin: 10px 10px;
+    height: 405px;
+  }
+  .clearfix .item-order1 p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .all-order {
+    margin: 40px 83px;
+  }
+  .step-wr h3 {
+    margin: 0px 110px;
+  }
+  .all-order > div {
+    float: left;
+    margin-right: 33px;
+    margin-left: 27px;
+  }
+}
+
+/* @media screen and (min-width: 1281px) {
+  .all-order {
+    margin: 40px 0;
+  }
+  .step-wr h3 {
+    margin: 0px 162px;
+  }
+  .all-order > div {
+    float: left;
+    margin-right: 33px;
+    margin-left: 27px;
+  }
+} */

@@ -1,0 +1,548 @@
+<app-header></app-header>
+
+<div id="page-top" style="font-family: 'Work Sans', sans-serif">
+  <!--/ Nav Star /-->
+
+  <!--/ Nav End /-->
+  <div id="new-order-wr" class="container-fluid p-0">
+    <div class="row no-gutters align-items-center">
+      <div class="col-md-2">
+        <div id="order-nav-drop">
+          <div id="current-page" style="display: none">New Order</div>
+          <ul class="side-tab">
+            <li class="new-order-tab">
+              <a routerLink="/new_order"><h4>New Order</h4></a>
+            </li>
+            <li class="p-history-tab">
+              <a routerLink="/purchase_history"><h4>Purchase History</h4></a>
+            </li>
+            <li class="o-status-tab">
+              <a routerLink="/order_status"><h4>Order Status</h4></a>
+            </li>
+            <li class="a-setting-tab">
+              <a routerLink="/change_password"><h4>Account Setting</h4></a>
+            </li>
+            <li class="financial-tab">
+              <a routerLink="/financials"><h4>Financials</h4></a>
+            </li>
+            <li class="g-back-tab">
+              <a routerLink="/dashboard"><h4>Go Back</h4></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-10 rside">
+        <!------------------------------------------- 1st block start -------------------------------------------->
+
+        <form [formGroup]="OrderModel" (ngSubmit)="submit()">
+          <div *ngIf="page_step == 1" id="step-1" class="step-wr step-box">
+            <div>
+              <h3>What would you like to order?</h3>
+            </div>
+
+            <div>
+              <ul class="clearfix product-ul">
+                <li *ngFor="let category of category_data; let i = index">
+                  <div class="radio">
+                    <label
+                      >
+                      <div class="item">
+                      <img src="{{ baseUrl }}image/{{ category.image }}"  /></div>
+                      <input
+                        type="radio"
+                        name="category"
+                        value="{{ category.category }},{{ category.id }}"
+                        formControlName="category"
+                      />{{ category.category }}
+
+                      <!-- <span *ngIf="i!=0">    <input type="radio" name="category" [(ngModel)]="order.category" value="{{category.category}},{{category.id}}" formControlName="category" >{{category.category}}
+                        </span>                      -->
+                    </label>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="row bottom-btn">
+                <div class="col-md-6 col-sm-6 col-6 text-left"></div>
+
+                <div class="col-md-6 col-sm-6 col-6 text-right">
+                  <div class="product-btn">
+                    <a
+                      id="step-2-btn"
+                      href="javascript:void(0);"
+                      (click)="nextStep()"
+                      >CONTINUE</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!------------------------------------------- 2nd block start -------------------------------------------->
+
+          <div *ngIf="page_step == 2" id="step-2" class="step-wr step-box">
+            <div>
+              <h3>Choose your design</h3>
+            </div>
+
+            <div>
+              <ul class="clearfix product-ul">
+                <li *ngFor="let subcategory of subcategory_data; let i = index">
+                  <div class="radio">
+                    <label
+                      ><img src="{{ baseUrl }}image/{{ subcategory.image }}" />
+                      <!-- <input type="radio" name="optradio" checked></label> -->
+                      <input
+                        type="radio"
+                        name="subcategory"
+                        (change)="imageselect(subcategory.image)"
+                        value="{{ subcategory.subcategory }}"
+                        formControlName="subcategory"
+                      />{{ subcategory.subcategory }}
+                    </label>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="design-btn">
+                <h6>Already have a design?</h6>
+                <div class="up-btn">
+                  <div class="file btn upload-btn">
+                    Upload your design
+                    <input type="file" (change)="onFileSelected($event)" />
+                  </div>
+                  <P *ngIf="imageUrl">Image uploaded</P>
+                  <!-- <img *ngIf="imageUrl" [src]="imageUrl"/> -->
+
+
+                  <!-- <span class="button-text">*Only JPEG or PDF {{order.image}}</span> -->
+                </div>
+              </div>
+
+              <div class="design-btn">
+                <!-- <h6>?</h6> -->
+                <div class="up-btn">
+                  <div class="file btn upload-btn">
+                    Upload your Logo
+                    <input type="file" (change)="onFileSelected1($event)" />
+
+
+                  </div>
+                  <P *ngIf="imageUrl_logo">Image uploaded</P>
+
+                  <!-- <img [src]="imageUrl_logo"/> -->
+                  <div>
+                    <p
+                      *ngIf="
+                        submitted && OrderModel.controls.logo.errors?.required
+                      "
+                      class="error"
+                    >
+                      Select Your logo
+                    </p>
+                  </div>
+
+                  <!-- <span class="button-text">*Only JPEG or PDF {{order.image}}</span> -->
+                </div>
+              </div>
+               
+              <div >
+                    
+                </div>
+              <div class="row bottom-btn">
+                <div class="col-md-6 col-sm-6 col-6 text-left">
+                  <div class="product-btn">
+                    <a
+                      id="back-step-1-btn"
+                      href="javascript:void(0)"
+                      (click)="backStep()"
+                      >BACK</a
+                    >
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-6 text-right">
+                  <div class="product-btn">
+                    <a
+                      id="step-3-btn"
+                      href="javascript:void(0)"
+                      (click)="nextStep()"
+                      >CONTINUE</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!------------------------------------------- 3rd block start -------------------------------------------->
+
+          <div *ngIf="page_step == 3" id="step-3" class="step-wr step-box">
+            <div>
+              <h3>Purchase order details</h3>
+            </div>
+
+            <div class="purchase-detail">
+              <div class="" action="">
+                <label for="coats">Choose the number of <span>{{ category_name }}</span>
+                </label>
+
+                <input
+                  type="text"
+                  (ngModelChange)="modelChanged($event)"
+                  onlyNumber
+                  formControlName="total"
+                />
+                <br />
+                <p
+                  *ngIf="
+                    submitted && OrderModel.controls.total.errors?.required
+                  "
+                  class="error"
+                  style="margin-left: 250px"
+                >
+                  this is required
+                </p>
+                <p
+                  *ngIf="
+                    matchmsg && !OrderModel.controls.total.errors?.required
+                  "
+                  class="error"
+                  style="margin-left: 250px"
+                >
+                  not match total value
+                </p>
+              </div>
+
+              <div class="size-block" action="">
+                <!-- <label for="size">Number of pieces per size</label> -->
+                <label for="avatar">Add Location </label>
+                <button
+                  type="button"
+                  class="add-location"
+                  value="+"
+                  style="background-color: green"
+                  (click)="add_orderItem()"
+                >
+                  + Add
+                </button>
+
+                <div formArrayName="orderdetail">
+                  <div
+                    id="size-select-box"
+                    *ngFor="let child of OrderDetail.controls; let i = index"
+                    [formGroupName]="i"
+                  >
+                    <div>
+                      <div>
+                        <div class="size-select">
+                          <span
+                            *ngIf="
+                              submitted && child.controls.state.errors?.required
+                            "
+                            class="error"
+                            >*</span
+                          >
+                          <select
+                            class="s-size"
+                            id="s-size"
+                            name="state"
+                            formControlName="state"
+                            style="width: 330px !important"
+                          >
+                            <option disabled value="" selected>
+                              Select State
+                            </option>
+                            <option
+                              *ngFor="let state of state_data"
+                              [value]="state.state"
+                            >
+                              {{ state.state }}
+                            </option>
+                          </select>
+                        </div>
+
+                        <div class="size-select">
+                          <span
+                            *ngIf="
+                              submitted && child.controls.city.errors?.required
+                            "
+                            class="error"
+                            >*</span
+                          >
+
+                          <h3>City</h3>
+
+                          <input
+                            type="text"
+                            name="city"
+                            formControlName="city"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="size-select">
+                          <span
+                            *ngIf="
+                              submitted &&
+                              child.controls.address.errors?.required
+                            "
+                            class="error"
+                            >*</span
+                          >
+
+                          <h3>Address</h3>
+                          <input
+                            type="text"
+                            name="address"
+                            formControlName="address"
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          class="add-location"
+                          value="-"
+                          style="background-color: red"
+                          (click)="delete_orderItem(i)"
+                        >
+                          - Delete
+                        </button>
+                        <div id="size-select-box-new">
+                          <div formArrayName="size_detail">
+                            <div
+                              class="size-select size-select1 size-select2"
+                              *ngFor="
+                                let child2 of child.get('size_detail').controls;
+                                let p = index
+                              "
+                              [formGroupName]="p"
+                            >
+                              <!-- <label>M</label> -->
+                              <label class="label1">{{
+                                child2.value.size
+                              }}</label>
+                              <input
+                                class="box-1"
+                                (ngModelChange)="modelChanged($event)"
+                                onlyNumber
+                                type="text"
+                                name="no_pice"
+                                formControlName="no_pice"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="request-btn">
+              <h6>You can request for a sample</h6>
+              
+              <div class="up-btn">
+              <div class="file btn upload-btn">
+              Request for sample
+              <input type="file" name="file"/>
+            </div>
+            </div>
+          </div> -->
+
+                <!-- <div class="design-btn">
+              <h6>Printable design</h6>
+              <div class="up-btn">
+              <div class="file btn upload-btn">
+              Upload your design
+              <input type="file" name="file"/>
+
+            </div>
+            <span class="button-text">*Only PDF</span>
+            </div>
+          </div> -->
+
+                <div class="row bottom-btn">
+                  <div class="col-md-6 col-sm-6 col-6 text-left">
+                    <div class="product-btn">
+                      <a
+                        id="back-step-2-btn"
+                        href="javascript:void(0)"
+                        (click)="backStep()"
+                        >BACK</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-6 text-right">
+                    <div class="product-btn">
+                      <a
+                        id="back-step-2-btn"
+                        href="javascript:void(0)"
+                        (click)="Summary()"
+                        >Summary</a
+                      >
+                      <button type="submit">Get Quotation</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row bottom-btn">
+                  <div class="col-md-6 col-sm-6 col-6 text-left">
+                    <div class="product-btn"></div>
+                  </div>
+
+                  <!-- <div class="col-md-6 col-sm-6 col-6 text-right">
+              <div class="product-btn">
+                <a id="step-4-btn" href="javascript:void(0)" (click)="nextStep()">CREATE PO</a>
+              </div>
+            </div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- samrry -->
+            <div *ngIf="summary" id="step-4" class="step-wr step-box">
+              <div class="step-wr">
+                <div class="step-logo text-right">
+                  <img src="assets/images/header_logo2-black.png" />
+                </div>
+                <div class="od" style="padding: 0px">
+                  <div>
+                    <h3>Order summary</h3>
+                  </div>
+
+                  <div class="order-detail">
+                    <p>Order Particular:</p>
+                    <span>{{ OrderModel.value.category }}</span>
+                  </div>
+
+                  <div class="order-design">
+                    <p>Design :</p>
+
+                    <img *ngIf="imageUrl" [src]="imageUrl"/>
+                    <!-- <img *ngIf!="imageUrl" src="{{ baseUrl }}image/{{order.image}}" /> -->
+                    <!-- <img  src="imageUrl ? imageUrl : {{baseUrl}}image/{{order.image}}"> -->
+
+                    <img [src]="imageUrl_logo"/>
+
+                    <div class="test-1" style="padding-left: 178px !important">
+                      {{ OrderModel.value.subcategory }}
+                      <p style="padding-left: 135px">Logo image</p>
+                    </div>
+
+                    <!-- <img  src="imageUrl ? imageUrl : {{baseUrl}}image/'{{order.image}}'"> -->
+                    <h1 style="margin: 91px 0px 0px">
+                      Total number of piece : {{ OrderModel.value.total }}
+                    </h1>
+                    <br />
+                    <br />
+                    <h3>detail</h3>
+                  </div>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">state</th>
+                        <th scope="col">city</th>
+                        <th scope="col">address</th>
+                        <th scope="col">total piece</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        *ngFor="
+                          let table of OrderModel.value.orderdetail;
+                          let i = index
+                        "
+                      >
+                        <th scope="row">1</th>
+                        <td>{{ table.state }}</td>
+                        <td>{{ table.city }}</td>
+                        <td>{{ table.address }}</td>
+                        <td>
+                          <span
+                            *ngFor="let x of table.size_detail; let t = index"
+                          >
+                            <span>{{ x.size }} - {{ x.no_pice }}</span>
+                            <br />
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- samrry -->
+          </div>
+
+          <!------------------------------------------- 4th block start -------------------------------------------->
+          <div *ngIf="page_step == 4" id="step-4" class="step-wr step-box">
+            <div class="step-wr">
+              <div class="step-logo text-right">
+                <img src="images/header_logo2-black.png" />
+              </div>
+              <div class="od">
+                <div>
+                  <h3>Order Details</h3>
+                </div>
+
+                <div class="order-detail">
+                  <p>Order Particular:</p>
+                  <span>{{ OrderModel.value.category }}</span>
+                </div>
+
+                <div class="order-design">
+                  <p>Design :</p>
+                  <img [src]="imageUrl" />
+                  <div>{{ OrderModel.value.subcategory }}</div>
+
+                  <!-- <img  src="imageUrl ? imageUrl : {{baseUrl}}image/'{{order.image}}'"> -->
+                  <h1>Total number of piece : {{ OrderModel.value.total }}</h1>
+                  <h3>All other order details.</h3>
+                </div>
+
+                <div class="row bottom-btn">
+                  <div class="col-md-6 col-sm-6 col-8 text-left">
+                    <div class="product-btn">
+                      <button type="submit">PLACE ORDER</button>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-4 text-right">
+                    <div class="product-btn">
+                      <a href="#">PRINT</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="order-bottom-sec">
+              <div class="request-q-btn">
+                <h6>Request for an estimate</h6>
+                <div class="">
+                  <div class="file btn upload-btn">
+                    Request Quotation
+                    <input type="file" name="file" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="thankyou-text">
+              <h3>
+                Thank you, Your order has been successfully placed, You can find
+                the status in Order Status.
+              </h3>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

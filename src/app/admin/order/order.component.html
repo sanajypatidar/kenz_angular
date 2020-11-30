@@ -1,0 +1,269 @@
+
+
+
+  <div id="wrapper">
+
+    <app-sidebar></app-sidebar>
+ 
+     
+  
+      <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+  
+          <app-topbar></app-topbar>
+     
+<!-- alert modal show  -->
+<div>
+           
+  data-toggle="modal" data-target="#exampleModal1" (click)="cotaion_confirmation(table)"     
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title heading-5" id="exampleModalLabel ">Detail</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- <p>Are you sure ? </p>
+          
+          <p>Do you really want to delete these <b></b> Category? This process cannot be undone.</p> -->
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">state</th>
+                <th scope="col">city</th>
+                <th scope="col">address</th>
+                <th scope="col">total piece</th>
+              </tr>
+              <!-- {{order_detail_result | json}} -->
+            </thead>
+            <tbody>
+              <!-- *ngFor="let table of OrderModel.value.orderdetail, let i = index;" -->
+              <tr *ngFor="let table of order_detail_result[0], let i = index;" >
+                <th scope="row">1</th>
+                <td>{{table.state}}</td>
+                <td>{{table.city}}</td>
+                <td>{{table.address}}</td>
+                <td>
+                <span *ngFor="let x of table.size_detail, let t = index;" >
+                    <span>{{x.size}} - {{x.no_pice}}</span> 
+                    <br>
+                </span>  
+                </td>
+          
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Delete</button> -->
+           <!-- <button type="button" style="color: whitesmoke;" class="btn btn-danger" data-dismiss="modal" >Detat</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+  <!-- alert modal show  -->
+
+<!-- cotaion modal -->
+<!-- alert modal show  -->
+<div>
+           
+           
+  <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title heading-5" id="exampleModalLabel ">Quotation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- <p>Are you sure ? </p>
+          
+          <p>Do you really want to delete these <b></b> Category? This process cannot be undone.</p> -->
+          <p>  category- <b>{{cotaion_data.category}}</b></p>
+         <p>  subcateogory- <b>{{cotaion_data.subcategory}}</b></p>
+         <form>
+         <label for="onlyNumber">quantity-{{cotaion_data.total}} *price:</label>
+         <input type="number"   name="per_pieces_amount"   [(ngModel)]="per_pieces_amount" (ngModelChange)="modelChanged($event,'per_piecs_amount')"  min="0" style="width: 50px;"><br>
+          <label for="onlyNumber">Tax:</label>
+
+          <input type="number"   name="tex"   [(ngModel)]="tex" (ngModelChange)="modelChanged($event,'tex')"  min="0" style="width: 50px;"><br>
+
+         <label>total pric-Rs {{total_amount}}</label>
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Delete</button> -->
+           <button type="button" style="color: whitesmoke;" class="btn btn-danger" data-dismiss="modal" (click)="cotation()" >Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+<!-- cotaion modal -->
+
+
+
+
+          <div>
+          <div class='col-md-4 col-md-offset-2' class="order-histry">
+          <h3>Orderhistory Section</h3>
+        </div>
+          <!-- <button type="button" class="btn btn-primary btn-sm">Add Product</button> -->
+          
+      </div>
+          
+          
+          <div class="container col-md-10 col-md-offset-2">
+           
+            <hr class="hr">
+          
+          
+ 
+          <div>
+             
+  
+              <table class="table table-striped table-space" style="margin-left: 115px;">
+                <tr>
+                  <th>No</th>
+                  <th> Order Id</th>
+                  <th>User Name</th>
+                  <th>User email</th>
+                  <th>Category</th>
+                  <th>Subcategory</th>
+                  <th>Total(with out Tax)</th>
+                  <th>Image</th>
+                  <th>Logo</th>
+                  <th>Total(Tax Included)</th>
+
+                  <th>Amount</th>
+                  
+                  <th>Detail</th>
+                  <th>Status</th>
+
+                </tr>
+           
+         
+                <tr *ngFor="let table of ordertable_table, let i = index;">
+                  <td>{{i+1}}</td>
+                  <td>{{table.orderid}}</td>
+                  <td> {{table.name}}</td>
+                  <td>{{table.email}}</td>
+                  <td>{{table.category}}</td>
+                  <td>{{table.subcategory}}</td>
+                  <td>{{table.total}}</td>
+
+                  <td><img src="{{baseUrl}}image/{{table.image}}" style="height: 50px; width: 50px;"></td>
+                 
+                  <td><img src="{{baseUrl}}image/{{table.logo}}" style="height: 100px; width: 100px;"></td>
+
+                 
+                  <td>{{table.amount | currency: 'INR':true}}</td>
+                 <td>{{table.total_amount | currency: 'INR':true}}</td>
+                  <td>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="detail(table.id)" style="width: 70px;">
+                      Detail
+                    </button>
+                  </td>
+                  <td>
+                    <div class="dropdown">
+                      <button class="btn btn-primary dropdown-toggle" type="button"  data-toggle="dropdown" style="width: 145px;" >{{table.status}}
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li *ngIf="table.status=='send cotation' || table.status=='cancel'" ><a   data-toggle="modal" data-target="#exampleModal1" (click)="cotaion_confirmation(table)">Send Quotation</a></li>
+                        <li *ngIf="table.status=='get cotation' || table.status=='send cotation'"><a  (click)="order_status('order',table.id,i)">approve</a></li>
+                        <li *ngIf="table.status=='confirm'"><a  (click)="order_status('order',table.id,i)">Confirm</a></li>
+                        <li *ngIf="table.status=='get cotation' || table.status=='send cotation' || table.status=='confirm'"><a  (click)="order_status('procured',table.id,i)">procured</a></li>
+
+                        <li *ngIf="table.status=='get cotation' || table.status=='send cotation' || table.status=='confirm' || table.status=='procured'"><a  (click)="order_status('stiching',table.id,i)">stiching</a></li>
+                        <li *ngIf="table.status=='get cotation' || table.status=='send cotation' || table.status=='confirm' || table.status=='procured' || table.status=='stiching'"><a  (click)="order_status('customisation',table.id,i)">customisation</a></li>
+                        <li *ngIf="table.status=='get cotation' || table.status=='send cotation' || table.status=='confirm' || table.status=='procured' || table.status=='stiching' || table.status=='customisation'"><a  (click)="order_status('order_complete',table.id,i)">Order ready</a></li>
+                        <li *ngIf="table.status=='get cotation' || table.status=='send cotation' || table.status=='confirm' || table.status=='procured' || table.status=='stiching' || table.status=='customisation' || table.status=='order_complete'"><a  (click)="order_status('dispatched',table.id,i)">dispatched</a></li>
+                        <li *ngIf="table.status=='get cotation' || table.status=='send cotation' || table.status=='confirm' || table.status=='procured' || table.status=='stiching' || table.status=='customisation' || table.status=='order_complete' || table.status=='dispatched'"><a  (click)="order_status('amount_paid',table.id,i)">Paid</a></li>
+                        <li > <a  (click)="order_status('cancel',table.id,i)">cancel</a> </li>
+
+
+
+
+<!-- 
+                        <li *ngIf="table.status=='Get cotation' || table.status=='send cotation' || table.status=='confirm' "><a  (click)="order_status('order',table.id,i)">order</a></li>
+                        <li *ngIf="table.status=='Get cotation' || table.status=='send cotation' || table.status=='confirm' || table.status=='order' "><a  (click)="order_status('process',table.id,i)">process</a></li>
+                        <li *ngIf="table.status=='Get cotation' || table.status=='send cotation' || table.status=='confirm' || table.status=='order' || table.status=='process' "><a  (click)="order_status('Delivered',table.id,i)">Delivered</a></li> -->
+
+                      </ul>
+                    </div>
+
+
+                  
+                  </td>
+                  
+                  
+                  <!-- <td>
+                    <button type="button" style="color: whitesmoke;" class="btn btn-info" (click)="editproduct(u._id)" >Edit</button>
+                    &nbsp;&nbsp;
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="deleteconfirmation(u)">
+                     Delete
+                   </button>
+                   </td> -->
+                  
+                </tr>
+              
+              
+              </table>
+              <!-- <div *ngIf="loader_show">
+                <div class="loader centered"></div>
+                </div> -->
+ 
+            </div>
+            
+            </div>
+            
+      </div>
+    </div>
+    </div>
+    
+  
+   <!-- // {{u.https://sheltered-woodland-33544.herokuapp.com/product_image/}}  -->
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

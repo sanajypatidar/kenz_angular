@@ -1,0 +1,98 @@
+<app-header> </app-header>
+<div class="container" style="padding-top: 150px; padding-bottom: 150px">
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header" style="background-color: #111111">
+          <span style="color: white; font-weight: bold">Login</span>
+        </div>
+
+        <div class="card-body">
+          <form aria-label="Login" [formGroup]="User" (ngSubmit)="submit()">
+            <input
+              type="hidden"
+              name="_token"
+              value="BmGHEPYE4k7Xg0PximTWYdXZ78JXsi918Mlslwgp"
+            />
+            <div class="form-group row">
+              <label
+                for="email"
+                class="col-sm-4 col-form-label text-md-right e_label"
+                >E-Mail Address</label
+              >
+
+              <div class="col-md-6">
+                <input
+                  id="email"
+                  type="email"
+                  class="form-control"
+                  formControlName="email"
+                  [(ngModel)]="user.email"
+                  style="margin: 0px 0"
+                />
+                <div *ngIf="submitted && User.controls.email.errors?.required">
+                  Email is required
+                </div>
+                <div *ngIf="submitted && User.controls.email.errors?.email">
+                  Valid Email is required
+                </div>
+
+                <!-- <div *ngIf="EwayForm.controls.docNo.errors?.pattern">THIIS TYPE NOT MATCH</div> -->
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label
+                for="password"
+                class="col-md-4 col-form-label text-md-right e_label"
+                >Password</label
+              >
+
+              <div class="col-md-6">
+                <input
+                  id="password"
+                  type="password"
+                  class="form-control"
+                  formControlName="password"
+                  [(ngModel)]="user.password"
+                />
+                <div
+                  *ngIf="submitted && User.controls.password.errors?.required"
+                >
+                  password is required
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row mb-0">
+              <div class="col-md-7 offset-md-5 center_contain">
+                <button type="submit" class="btn button_size">Login</button>
+                <button
+                  type="button"
+                  routerLink="/signup"
+                  class="btn button_size"
+                >
+                  Signup
+                </button>
+                <button
+                  type="button"
+                  class="btn btn1"
+                  (click)="forget_password()"
+                >
+                  Forget Password
+                </button>
+                {{ massage }}
+              </div>
+              <!-- <a style="cursor: pointer;" target="_blank" (click)="facebook_login()"   class="btn azm-social azm-size-64 azm-circle azm-long-shadow azm-facebook"><i class="fa fa-facebook"></i></a>
+                            <a style="cursor: pointer;" target="_blank"  (click)="google_login()"
+                            class="btn azm-social azm-size-64 azm-circle azm-long-shadow azm-google-plus"><i class="fa fa-google-plus"></i></a> -->
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<app-footer></app-footer>

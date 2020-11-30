@@ -1,0 +1,197 @@
+
+   
+
+<div id="page-top" style="font-family: 'Work Sans', sans-serif;">
+
+<!-- alert modal show  -->
+<div>
+           
+     
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title heading-5 heading-delet" id="exampleModalLabel ">Order summary</h5>
+          <button type="button"  class="close btn-popup button-close" data-dismiss="modal"  aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        
+    <!-- order sumary -->
+
+
+    <div   class="step-wr step-box step-wr1">
+      <div class="step-wr">
+        <div class="step-logo text-right">
+          <!-- <img src="images/header_logo2-black.png"> -->
+        </div>
+        <div class="od">
+    
+            <div>
+              
+            </div>
+    
+            <div class="order-detail">
+              <p>Order Particular:</p>
+              <span>{{order_data.category}}</span>
+            </div>
+    
+              <div class="order-design">
+                <p>Design :</p>
+                <img  src="{{baseUrl}}image/{{order_data.image}}">
+                <div>{{order_data.subcategory}}</div>
+    
+                <!-- <img  src="imageUrl ? imageUrl : {{baseUrl}}image/'{{order.image}}'"> -->
+                <h1 class="total-no">Total number of piece : {{order_data.total}}</h1>
+                <br>
+                <h1>Total Amount: {{order_data.amount}}</h1>
+                <br>
+                <h3>Detail</h3>
+
+              </div>
+    <table class="table">
+<thead>
+<tr>
+  <th scope="col">#</th>
+  <th scope="col">state</th>
+  <th scope="col">city</th>
+  <th scope="col">address</th>
+  <th scope="col">total piece</th>
+</tr>
+</thead>
+<tbody>
+  <!-- {{order_detail_result |json}} -->
+<tr *ngFor="let table of order_detail_result[0], let i = index;">
+  <th scope="row">1</th>
+  <td>{{table.state}}</td>
+  <td>{{table.city}}</td>
+  <td>{{table.address}}</td>
+  <td>
+  <span *ngFor="let x of table.size_detail, let t = index;" >
+      <span>{{x.size}} - {{x.no_pice}}</span> 
+      <br>
+  </span>  
+  </td>
+
+</tr>
+
+</tbody>
+</table>
+    
+    
+          
+    
+            
+              </div>
+            
+          </div>
+    
+      
+        </div>
+
+   <!-- samrry -->
+    <!-- order sumary -->
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" [disabled]="disable" (click)="cancel(order_data.id)" >Cancel</button>
+          <!-- <button type="button" class="btn btn-primary">Delete</button> -->
+           <button type="button" style="color: whitesmoke;" [disabled]="disable" class="btn btn-danger" data-dismiss="modal" (click)="approve(order_data.id)" >approve</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+  <!-- alert modal show  -->
+
+
+
+
+
+
+  <!--/ Nav Star /-->
+  <app-header></app-header>
+  <!--/ Nav End /-->
+  <div id="new-order-wr" class="container-fluid p-0">  
+    <div class="row no-gutters align-items-center">
+      <div class="col-md-2">
+        <div id="order-nav-drop">
+          <div id="current-page" style="display:none;">Order Status</div>
+          <ul class="side-tab">
+            <li class="new-order-tab"><a routerLink="/new_order"><h4>New Order</h4></a></li>
+            <li class="p-history-tab"><a routerLink="/purchase_history"><h4>Purchase History</h4></a></li>
+            <li class="o-status-tab"><a routerLink="/order_status"><h4>Order Status</h4></a></li>
+            <li class="a-setting-tab"><a routerLink="/change_password"><h4>Account Setting</h4></a></li>
+            <li class="financial-tab"><a routerLink="/financials"><h4>Financials</h4></a></li>
+            <li class="g-back-tab"><a routerLink="/dashboard"><h4>Go Back</h4></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-10 rside">
+
+        <div id="step-1" class="step-wr">
+
+
+          <div class="row top-btn" *ngFor="let table of ordertable_table, let i = index;">
+          
+            <div class="col-md-6 text-left">
+            	<h3>Order status for Order # {{table.orderid}}</h3>
+            </div>
+
+            <div class="col-md-6 text-right">
+              <div class="product-btn">
+                <a data-toggle="modal" data-target="#exampleModal" (click)="order_detail(table)" >View Order Summary</a>
+              </div>
+            </div>
+
+            <div class="order-status">
+            	<ul>
+            		<li  [ngClass]="{'active' : (table.status=='get cotation' || table.status=='confirm' ||  table.status=='order' || table.status=='procured' || table.status=='stiching' || table.status=='customisation' || table.status=='order_complete' || table.status=='dispatched' || table.status=='amount_paid')}"><span></span>
+            		<label>Get Quotation</label></li>
+
+        			<li [ngClass]="{'active' : (table.status=='order' || table.status=='confirm' || table.status=='procured' || table.status=='stiching' || table.status=='customisation' || table.status=='order_complete' || table.status=='dispatched' || table.status=='amount_paid')}"><span></span>
+        			<label>PO Approved</label></li>
+
+        			<li [ngClass]="{'active' : (table.status=='procured' || table.status=='stiching' || table.status=='customisation' || table.status=='order_complete' || table.status=='dispatched' || table.status=='amount_paid')}"><span></span>
+        			<label>Production Started</label></li>
+
+        			<li [ngClass]="{'active' : (table.status=='stiching' || table.status=='customisation' || table.status=='order_complete' || table.status=='dispatched' || table.status=='amount_paid')}"><span></span>
+        			<label>Stitching in Process</label></li>
+
+        			
+        			<li [ngClass]="{'active' : (table.status=='customisation' || table.status=='order_complete' || table.status=='dispatched' || table.status=='amount_paid')}"><span></span>
+        			<label>Order customisation</label></li>
+
+              <li [ngClass]="{'active' : (table.status=='order_complete' || table.status=='dispatched' || table.status=='amount_paid')}"><span></span>
+                <label>Order Ready</label></li>
+   
+        			<li [ngClass]="{'active' : (table.status=='dispatched' || table.status=='amount_paid')}"><span></span>
+        			<label>Order dispatched</label></li>
+
+        			<li [ngClass]="{'active' : (table.status=='amount_paid')}"><span></span>
+        			<label>Amount Paid</label></li>
+
+            	</ul>
+            </div>
+        </div>
+
+
+       
+
+      </div>
+
+    </div>
+  </div>
+
+  
+
+
+    <app-footer></app-footer>
+  
+
+ 
+
+</div>>

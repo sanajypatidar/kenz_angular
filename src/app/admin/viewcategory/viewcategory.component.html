@@ -1,0 +1,138 @@
+<div id="wrapper">
+  <app-sidebar></app-sidebar>
+  <!-- alert modal show  -->
+  <div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title heading-5" id="exampleModalLabel">
+              Delete Category
+            </h5>
+            <button
+              type="button"
+              class="close button-close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p style="font-size: 17px">Are you sure ?</p>
+
+            <p style="font-size: 17px">
+              Do you really want to delete these
+              <b>{{ delete_obj.category }}</b> Category? This process cannot be
+              undone.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary sky-button"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <!-- <button type="button" class="btn btn-primary">Delete</button> -->
+            <button
+              type="button"
+              style="color: whitesmoke"
+              class="btn btn-"
+              data-dismiss="modal"
+              (click)="delete(delete_obj.id)"
+              class="delet-button-rad"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- alert modal show  -->
+
+  <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
+      <app-topbar></app-topbar>
+
+      <div class="row">
+        <div class="col-md-4 col-md-offset-2 catogery">
+          <h3 style="margin-bottom: -30px">Category Section</h3>
+        </div>
+        <!-- <button type="button" class="btn btn-primary btn-sm">Add Product</button> -->
+        <div class="text-right col-md-6 add">
+          <!-- <div class="text-right" class="container col-md-4" style="margin: ">  -->
+          <button
+            type="button"
+            class="btn btn-primary button-green"
+            title="Add product"
+            routerLink="/admin/addcategory"
+          >
+            Add Category
+          </button>
+        </div>
+      </div>
+      <div class="container col-md-10 col-md-offset-2">
+        <hr class="hr" />
+
+        <div>
+          <table class="table table-striped table-2">
+            <tr>
+              <th>No</th>
+              <th>Category Name</th>
+              <th>Image</th>
+              <th>Action</th>
+            </tr>
+            <tr *ngFor="let u of category_table; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{ u.category }}</td>
+              <td>
+                <img
+                  src="{{ baseUrl }}image/{{ u.image }}"
+                  height="100px"
+                  width="100px"
+                />
+              </td>
+
+              <td>
+                <button
+                  type="button"
+                  style="color: whitesmoke"
+                  class="edit-button btn btn-info"
+                  (click)="editproduct(u.id)"
+                >
+                  Edit
+                </button>
+                &nbsp;&nbsp;
+                <button
+                  type="button"
+                  class="btn btn-danger red-button"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                  (click)="deleteconfirmation(u)"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- <div *ngIf="loader_show">
+      <div class="loader centered"></div>
+      </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- // {{u.https://sheltered-woodland-33544.herokuapp.com/product_image/}}  -->

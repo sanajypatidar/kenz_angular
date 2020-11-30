@@ -1,0 +1,38 @@
+.nav-lin{
+    color: white
+  }
+  .nav-lin:hover{
+    color: #ADD1CD;
+  }
+  .overlay-mf{
+    background-color: #a4dad2;
+
+  }
+  .ico-circle{
+    color: #C5DACD
+  }
+  .icon_hover:hover{
+    color: white !important;
+     background-color: #708289;
+  }
+  .icon_hover{
+    color: #708289 !important;
+    background-color: #C5DACD;
+  }
+  .button_display{
+    display: none;
+  }
+  h4{
+    margin: 0px;
+  }
+  h3{
+    margin: 0px;
+  }
+  .item-order1 p 
+  { 
+    margin: 5px 10px 12px;
+  }
+  .all-order div{
+    margin-top: 15px;
+  }
+  

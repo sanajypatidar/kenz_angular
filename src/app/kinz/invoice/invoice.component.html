@@ -1,0 +1,184 @@
+
+
+
+
+  
+
+<app-header></app-header>
+
+   
+
+   <div>
+       
+     
+      <div class="container header-margin">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="assets/images/kenz-logo.png" style="width: 30%; margin-top:80px">
+          </div><!--colmd-6 close-->
+          <div class="col-md-6">
+            <div class="menu" style="text-align: right;">
+              <h1 style="font-family: sans-serif; ">INVOICE</h1>
+              <b style="color: #000;font-weight: 600;">MADD SQUARE CREATIONS PVT LTD</b>
+              <p style="color: #141412c7;font-weight: 600;margin-bottom: 5px;">No. 34/3,8th Main<br>
+              8th Cross, 2nd block, Jayanagar Bangalore<br>Bangalore,   Karnataka 560011<br>
+                India
+              </p>
+              <p style="color: #141412c7;font-weight: 600;"> GST No. 29AANCM1259K1ZX<br>
+                 www.getkenz.com<br>
+               </p>
+
+            </div><!--menu-->
+          </div><!--colmd-6 close-->
+        </div><!--row close-->
+       </div><!--conatiner close-->
+          
+      
+     <hr class="hr">
+   <!--new conatiner start-->
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+            <p class="bill" style="color: #141412c7;font-weight: 600;">BILL TO</p>
+            <b>{{table_data.name}}</b>
+            <p style="color: #141412c7;font-weight: 600;">{{table_data.email}}</p>
+            <b>7795618099</b>
+          </div><!--colmd-6 close-->
+          <div class="col-md-6">
+            <div class="menu" style="text-align: right;">
+            <table class="tab-1">
+              <tbody>
+                 <tr>
+                   <th scope="row">Invoice Number:</th>
+                   <td class="manege-td">KENZ616</td>
+                </tr>
+                 <tr>
+                   <th scope="row">Invoice Date:</th>
+                   <td class="manege-td">August 17, 2020</td>
+                </tr>
+                 <tr>
+                   <th scope="row">Payment Due:</th>
+                   <td class="manege-td">September 1, 2020</td>
+                </tr>
+                 <tr>
+                   <th scope="row">Amount Due (INR):</th>
+                   <td class="manege-td"><i class="fa fa-inr" aria-hidden="true"></i>{{table_data.amount}}</td>
+                </tr>
+               </tbody>
+            </table>
+            </div><!--menu-->
+          </div><!--colmd-6 close-->
+        </div><!--row close-->
+    </div><!--container close-->
+
+    <!-- <div class="bg-color"> -->
+      <!-- </div>bg-color -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+          
+   <table class="table table-borderless">
+  <thead>
+    <tr class="table-row">
+      <th scope="col">Items</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th scope="col">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="bordered">
+      <th scope="row">{{table_data.category}}
+      </th>
+      <td>{{table_data.total}}</td>
+      <td>{{table_data.per_pieces_amount |  currency: 'INR'}}</td>
+      <td>{{table_data.amount | currency: 'INR'}}</td>
+    </tr>
+   
+    <tr>
+      <td></td>
+      <td></td>
+      <th class="bordered" style="width: 315px;">tex include({{table_data.tex_amount}} %):</th>
+      <td class="bordered">{{table_data.total_amount-table_data.amount |  currency: 'INR'}}</td>
+
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <th class="bordered">Total:</th>
+      <td class="bordered">{{table_data.total_amount |  currency: 'INR'}}</td>
+
+    </tr>
+
+     
+   
+  </tbody>
+</table>
+          </div><!--col-md-12 close-->
+        </div><!--row close-->
+      </div><!--conatiner close-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text">
+              <b>Notes / Terms</b>
+              <p style="color: #141412c7; font-weight: 600;">Under normal business circumstances, the company will ensure to get the delivery of all products within the stipulated time
+period communicated to at the time of order confirmation and if any delay will be informed to the customer.
+            
+            <ul style="color: #141412c7; font-weight: 600;">
+               <li> 50% of the total invoice amount has to be paid as an advance on order       confirmation and 50% on delivery.
+              </li>
+               <li> Any change in design or quantity or fabric quality has to be intimated at the time of advance payment and will not be changed
+               once the work is started.
+              </li>
+              <li> Goods have to be checked for Quality, Colour, Design, and counted thoroughly on delivery, and if any issues, it has to
+              highlighted at the time of delivery. No return or replacement or quantity mismatch requests will be entertained later.</li>
+              <li>The company shall keep all the information provided by the customer confidential excepting only such information as is
+              already generally known to the public and that he shall not release use or disclose of the same except with the prior written
+               permission of the customer or if required by law or an order from the court.
+              </li>
+              <li>MADD SQUARE CREATION PVT LTD is governed by the laws of the country. The company will carry out its business in good
+              faith with complete transparency. The company reserves the right to refuse any order that it cannot deem to fulfill within the
+             legal and regulatory framework of the country.
+             </li>
+          </ul>
+          <hr>
+            
+              <h1 style="font-size: 17px;font-weight: 600;margin-bottom: 20px;">Notes / Terms  </h1>
+              <h2 style="font-size: 15px;">ACCOUNT DETAILS</h2>
+                <p style="color: #141412c7;
+    font-weight: 600;">Axis Bank</p>
+                <ul style="list-style-type: none;color: #141412c7;font-weight: 600;margin-bottom: 50px;">
+                  <li>Current Account name: MADD SQUARE CREATIONS PVT LIMITED</li>
+                  <li>Account Number: 919020095285992</li>
+                  <li>IFSC CODE : UTIB0000558</li>
+                </ul>
+            </div><!--text close-->
+          </div>
+        </div> 
+      </div><!--conatainer-->
+ 
+     <div class="row" id="Footer" >
+         <div style="margin-left: 669px;margin-top: 20px;">
+        <a  routerLink="/financials" class="btn btn-primary" style="margin-right: 10px;">Back</a>
+        <a (click)="printF()" class="btn btn-primary" style="color: #fff;">Print</a>
+    </div>
+     </div>        
+
+  
+ 
+
+
+
+
+
+
+
+
+     
+
+   </div>
+   <div id="Footer">
+   <app-footer></app-footer>
+  </div>

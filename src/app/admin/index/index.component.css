@@ -1,0 +1,423 @@
+.c-no {
+  height: 150px;
+}
+.grey-bg {
+  background: #ebebeb;
+}
+.counter-Txt {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  bottom: 25px;
+  left: 49px;
+  color: #c5dacd;
+}
+.counter-Txt span {
+  display: block;
+  font-size: 15px;
+}
+
+.Count {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+}
+.counter-card-1 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  background: #000;
+  margin: 30px 50px;
+  padding: 60px 147px;
+  position: relative;
+  height: 150px;
+}
+
+.admindashbord {
+  margin: 82px 510px 10px 0px;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+
+  float: right;
+  color: #fff;
+  display: inline;
+}
+a.user-icon {
+  position: absolute;
+  bottom: 20px;
+  font-size: 80px;
+  left: 44px;
+
+  color: #fff;
+}
+a.user-icon:hover {
+  color: #c5dacd;
+}
+a.order-icon {
+  position: absolute;
+  bottom: 20px;
+  font-size: 80px;
+  left: 44px;
+
+  color: #fff;
+}
+a.order-icon :hover {
+  color: #c5dacd;
+}
+@media only screen and (min-device-width: 220px) and (max-device-width: 480px) {
+  .admindashbord {
+    margin: 60px 0px 1px 0px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    float: right;
+    color: #fff;
+    display: inline;
+  }
+  .breadcome-list {
+    padding-top: 0px;
+    padding-bottom: 2px;
+  }
+  .counter-card-1 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    background: #000;
+    margin: 14px 64px;
+    position: relative;
+    height: 120px;
+    left: 55px;
+    padding: 52px 39px;
+  }
+  .user-icon i {
+    position: absolute;
+    bottom: 11px;
+    font-size: 70px;
+    left: -34px;
+    color: #fff;
+  }
+  .order-icon i {
+    position: absolute;
+    bottom: 11px;
+    font-size: 70px;
+    left: -34px;
+    color: #fff;
+  }
+  .container-fluid {
+    width: 100%;
+    padding-right: 8px;
+    padding-left: 140px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .top {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 1px;
+    padding-left: 15px;
+  }
+  .counter-Txt {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 20px;
+    left: 32px;
+    color: #c5dacd;
+  }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 599px) {
+  .admindashbord {
+    margin: 60px 0px 1px 0px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    float: right;
+    color: #fff;
+    display: inline;
+  }
+  .breadcome-list {
+    padding-top: 0px;
+    padding-bottom: 2px;
+  }
+  .counter-card-1 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    background: #000;
+    margin: 14px 64px;
+    position: relative;
+    height: 120px;
+    left: 55px;
+    padding: 52px 39px;
+  }
+  .user-icon i {
+    position: absolute;
+    bottom: 11px;
+    font-size: 70px;
+    left: -34px;
+    color: #fff;
+  }
+  .order-icon i {
+    position: absolute;
+    bottom: 11px;
+    font-size: 70px;
+    left: -34px;
+    color: #fff;
+  }
+  .container-fluid {
+    width: 100%;
+    padding-right: 8px;
+    padding-left: 140px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .top {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 1px;
+    padding-left: 15px;
+  }
+  .counter-Txt {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 20px;
+    left: 32px;
+    color: #c5dacd;
+  }
+}
+@media only screen and (min-device-width: 600px) and (max-device-width: 749px) {
+  .admindashbord {
+    margin: 65px 115px 10px 0;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    float: right;
+    color: #fff;
+    display: inline;
+  }
+  .breadcome-list {
+    padding-top: 22px;
+    padding-bottom: 14px;
+  }
+  .counter-card-1 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    background: #000;
+    margin: 30px 80px;
+    position: relative;
+    height: 150px;
+    left: 50px;
+    padding: 50px 0;
+  }
+
+  .container-fluid {
+    width: 100%;
+    padding-right: 2px;
+    padding-left: 150px;
+    margin-left: auto;
+  }
+}
+@media only screen and (min-device-width: 750px) and (max-device-width: 768px) {
+  .admindashbord {
+    margin: 65px 131px 10px 0;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    float: right;
+    color: #fff;
+    display: inline;
+  }
+  .sr-input-func {
+    position: relative;
+    margin: 0px 76px;
+    text-align: center;
+    right: 0px;
+    transition: 0.5s ease-out;
+  }
+  .breadcome-list {
+    padding-top: 22px;
+    padding-bottom: 14px;
+  }
+  .counter-Txt {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 25px;
+    left: 26px;
+    color: #c5dacd;
+  }
+  .counter-card-1 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    background: #000;
+    margin: 30px 138px;
+    padding: 70px 147px;
+    position: relative;
+    left: 100px;
+  }
+  .container-fluid {
+    width: 100%;
+    padding-right: 2px;
+    padding-left: 150px;
+    margin-left: auto;
+  }
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 801px) {
+  .admindashbord {
+    margin: 71px 243px 10px 0px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    float: right;
+    color: #fff;
+    display: inline;
+  }
+  .counter-card-1 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    background: #000;
+    margin: 30px 185px;
+    padding: 60px 203px;
+    position: relative;
+  }
+  .counter-Txt {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 25px;
+    left: 26px;
+    color: #c5dacd;
+  }
+  .container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 147px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media only screen and (min-device-width: 802px) and (max-device-width: 1024px) {
+  .admindashbord {
+    margin: 82px 284px 10px 0px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    float: right;
+    color: #fff;
+    display: inline;
+  }
+  .counter-card-1 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    background: #000;
+    margin: 30px 15px;
+    padding: 60px 150px;
+    position: relative;
+  }
+  .counter-Txt {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 25px;
+    left: 26px;
+    color: #c5dacd;
+  }
+  .container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .breadcome-list {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0 0 0 -45px;
+    /* left: 59px; */
+  }
+}
+/* @media only screen and (min-device-width: 1150px) and (max-device-width: 1280px) {
+  .row {
+    margin-top: 87px;
+  }
+  .newtest {
+    margin: 60px -79px 30px 0px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    float: right;
+    color: #fff;
+    display: inline;
+  }
+} */
+/* 
+
+
+
+.c-no{height:150px;}
+.grey-bg{background:#ebebeb;}
+.counter-Txt{text-align:center; font-size:20px; font-weight:bold; 
+    text-transform:uppercase;
+    position: relative;
+    bottom: 48px;
+    left: 49px;
+    color: #525658;
+}
+.counter-Txt span{display:block; font-size:15px;
+}
+@media(min-width:320px) and (max-width:767px){ 
+.c-no{height:100%;}
+.counter-Txt{margin-top:35px;}
+.margin-bot-35{margin-bottom:35px;}
+}
+
+.Count {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+}
+.counter-card-1{
+         box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+     background: white;
+     margin:30px 50px;
+     padding: 60px 147px;
+     position: relative;
+
+}
+.new{
+    
+}
+.admindashbord{
+    margin: 82px 0px 10px 0px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+ 
+    float: right;
+    color: #fff;
+    display: inline;
+}
+a.user-icon{
+    position: absolute;
+    bottom: 53px;
+    font-size: 98px;
+    left: 44px;
+    background-color: #fd7e14;
+    color: #fff;
+}
+a.order-icon{
+    position: absolute;
+    bottom: 53px;
+    font-size: 98px;
+    left: 44px;
+    background-color: #dc3545;
+    color: #fff;
+} */

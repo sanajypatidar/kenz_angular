@@ -1,0 +1,245 @@
+.nav_hover:hover {
+  color: #add1cd;
+}
+.nav_hover {
+  font-size: 16px;
+  color: white;
+}
+.lead {
+  font-size: 0.9rem;
+}
+.overlay-mf {
+  background-color: #eeeeee;
+}
+.ico-circle {
+  color: #c5dacd;
+}
+.icon_hover:hover {
+  color: white !important;
+  background-color: #708289;
+}
+.icon_hover {
+  color: #708289 !important;
+  background-color: #c5dacd;
+}
+.product_hover:hover {
+  opacity: 0.5;
+}
+.button_display {
+  display: none;
+}
+.center_contain {
+  margin-left: 27.66667%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.button_size {
+  background-color: #111111;
+  border: none;
+  color: white;
+  width: 75px;
+  font-size: 70%;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-right: 0px;
+  padding: 0px;
+}
+.btn1 {
+  background-color: #111111;
+  border: none;
+  color: white;
+  width: 100px;
+  font-size: 70%;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-right: 0px;
+  padding: 0px;
+}
+.e_label {
+  margin: 0px 0;
+  background-color: #fff;
+  white-space: nowrap;
+  padding-top: 14px;
+  margin-right: 30px;
+}
+.button-jubo {
+  background-color: #111111;
+  border: none;
+  color: white;
+  width: 106px;
+  font-size: 72%;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 479px) {
+  .btn1 {
+    background-color: #111111;
+    border: none;
+    color: white;
+    width: 106px;
+    font-size: 72%;
+    font-weight: 700;
+    margin: 0 0 10px -5px;
+  }
+}
+@media only screen and (min-device-width: 480px) and (max-device-width: 512px) {
+  .btn1 {
+    background-color: #111111;
+    border: none;
+    color: white;
+    width: 179px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 16px 4px;
+  }
+  .center_contain {
+    margin-left: 22.66667%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media only screen and (min-device-width: 513px) and (max-device-width: 580px) {
+  .center_contain {
+    margin-left: 11.66667%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .button_size {
+    background-color: #111111;
+    border: none;
+    color: white;
+    width: 75px;
+    font-size: 70%;
+    font-weight: 700;
+    margin: 10px 2px;
+
+    padding-right: 0px;
+    padding: 0px;
+  }
+  .btn1 {
+    background-color: #111111;
+    border: none;
+    color: white;
+    width: 100px;
+    font-size: 70%;
+    font-weight: 700;
+    margin-bottom: 10px;
+    /* padding-right: 10px; */
+    padding: 0px;
+    margin: 0 2px;
+  }
+}
+@media only screen and (min-device-width: 581px) and (max-device-width: 767px) {
+  .btn {
+    background-color: #111111;
+    border: none;
+    color: white;
+    width: 106px;
+    font-size: 72%;
+    font-weight: 700;
+    margin: 0 0 10px -23px;
+  }
+  .card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0;
+  }
+  .center_contain {
+    margin-left: 34.66667%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .center_contain {
+    margin-left: 27.66667%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .button_size {
+    background-color: #111111;
+    border: none;
+    color: white;
+    width: 75px;
+    font-size: 70%;
+    font-weight: 700;
+    margin: 10px 2px;
+
+    padding-right: 0px;
+    padding: 0px;
+  }
+  .btn1 {
+    background-color: #111111;
+    border: none;
+    color: white;
+    width: 100px;
+    font-size: 70%;
+    font-weight: 700;
+    margin-bottom: 10px;
+    /* padding-right: 10px; */
+    padding: 0px;
+    margin: 0 26px;
+  }
+  .row {
+    margin-right: 0px;
+    margin-left: 0px;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .e_label {
+    margin: 0px 0;
+    background-color: #fff;
+    white-space: nowrap;
+    padding-top: 9px;
+    margin-right: 14px;
+    text-align: right;
+    font-size: 15px;
+  }
+  .form-control {
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #e5e6e7;
+    border-radius: 1px;
+    color: inherit;
+    display: block;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s,
+      box-shadow 0.15s ease-in-out 0s;
+    width: 127%;
+    height: 40px;
+    box-shadow: none;
+  }
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
+  .center_contain {
+    margin-left: 20.66667%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .button_size {
+    background-color: #111111;
+    border: none;
+    color: white;
+    width: 55px;
+    font-size: 68%;
+    font-weight: 700;
+    margin: 10px 6px;
+    padding-right: 0px;
+    padding: 0px;
+  }
+  .btn1 {
+    background-color: #111111;
+    border: none;
+    color: white;
+    width: 85px;
+    font-size: 68%;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding: 0px;
+    margin: 0 5px;
+  }
+}

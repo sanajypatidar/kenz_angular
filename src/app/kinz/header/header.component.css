@@ -1,0 +1,53 @@
+.nav_hover:hover {
+  color: #add1cd;
+}
+.nav_hover {
+  font-size: 16px;
+  color: white;
+}
+.lead {
+  font-size: 0.9rem;
+}
+.overlay-mf {
+  background-color: #eeeeee;
+}
+.ico-circle {
+  color: #c5dacd;
+}
+.icon_hover:hover {
+  color: white !important;
+  background-color: #708289;
+}
+.icon_hover {
+  color: #708289 !important;
+  background-color: #c5dacd;
+}
+.product_hover:hover {
+  opacity: 0.5;
+}
+.button_display {
+  display: none;
+}
+a.btn.dropdown-toggle {
+  font-size: 16px;
+  color: #fff;
+  font-family: proximanova-bold;
+  padding: 0px 0px 0px 0px;
+}
+li.dropdown {
+  padding: 10px 27px 10px 11px;
+}
+.dropdown-A {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  display: inline;
+  cursor: pointer;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+    background: black;
+  }
+}

@@ -1,0 +1,7 @@
+# robots.txt for Kenz- http://www.getkenz.com/
+
+Sitemap: http://www.getkenz.com/sitemap.xml
+
+User-agent: *
+
+allow: *

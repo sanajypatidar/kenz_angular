@@ -1,0 +1,45 @@
+
+
+
+    .nav_hover:hover{
+        color: #ADD1CD
+      }
+      .nav_hover{
+        font-size: 16px;
+        color: white
+      }
+      .lead{
+        font-size: .9rem
+      }
+      .overlay-mf{
+        background-color: white
+  
+      }
+      .ico-circle{
+        color: #C5DACD
+      }
+      .icon_hover:hover{
+        color: white !important;
+         background-color: #708289;
+      }
+      .icon_hover{
+        color: #708289 !important;
+        background-color: #C5DACD;
+      }
+      .product_hover:hover{
+        opacity: 0.5
+      }
+      .button_display{
+        display: none;
+      }
+      .card_hover:hover{
+        box-shadow: 0 10px 8px -8px black;
+      }
+      /*.m:hover{
+        opacity: 0.7
+      }*/
+      .product_button:hover{
+        border: none;
+        border: transparent;
+        opacity: .8
+      }

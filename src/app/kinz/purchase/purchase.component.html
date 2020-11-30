@@ -1,0 +1,241 @@
+<app-header></app-header>
+
+
+<div id="page-top" style="font-family: 'Work Sans', sans-serif;">
+
+<!-- alert modal show  -->
+<div>
+           
+     
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title heading-5 heading-delet" id="exampleModalLabel ">Order summary</h5>
+          <button type="button " class="close btn-popup" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        
+    <!-- order sumary --> 
+
+
+    <div   class="step-wr step-wr1  step-box">
+      <div class="step-wr">
+        <div class="step-logo text-right">
+          <!-- <img src="images/header_logo2-black.png"> -->
+        </div>
+        <div class="od">
+    
+            <div>
+              <!-- <h3>Order summary</h3> -->
+            </div>
+    
+            <div class="order-detail">
+              <p>Order Particular:</p>
+              <span>{{order_data.category}}</span>
+            </div>
+    
+              <div class="order-design">
+                <p>Design :</p>
+                <img  src="{{baseUrl}}image/{{order_data.image}}">
+                <div>{{order_data.subcategory}}</div>
+    
+                <!-- <img  src="imageUrl ? imageUrl : {{baseUrl}}image/'{{order.image}}'"> -->
+                <h1 class="total-no">Total number of piece : {{order_data.total}}</h1>
+                <br>
+                <br>
+                <h3>detail</h3>
+
+              </div>
+    <table class="table">
+<thead>
+<tr>
+  <th scope="col">#</th>
+  <th scope="col">state</th>
+  <th scope="col">city</th>
+  <th scope="col">address</th>
+  <th scope="col">total piece</th>
+</tr>
+</thead>
+<tbody>
+  <!-- {{order_detail_result |json}} -->
+<tr *ngFor="let table of order_detail_result[0], let i = index;">
+  <th scope="row">1</th>
+  <td>{{table.state}}</td>
+  <td>{{table.city}}</td>
+  <td>{{table.address}}</td>
+  <td>
+  <span *ngFor="let x of table.size_detail, let t = index;" >
+      <span>{{x.size}} - {{x.no_pice}}</span> 
+      <br>
+  </span>  
+  </td>
+
+</tr>
+
+</tbody>
+</table>
+    
+    
+          
+    
+            
+              </div>
+            
+          </div>
+    
+      
+        </div>
+
+   <!-- samrry -->
+    <!-- order sumary -->
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Delete</button> -->
+           <!-- <button type="button" style="color: whitesmoke;" class="btn btn-danger" data-dismiss="modal"  >approve</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+  <!-- alert modal show  -->
+
+
+
+  <!-- alert modal show  -->
+  <div>
+           
+           
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title heading-5 heading-delet" id="exampleModalLabel">Re-order</h5>
+            <button type="button" class="close btn-popup button-close" data-dismiss="modal" aria-label="Close" >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p style="font-size: 14px;">Are you sure ? </p>
+            
+            <p style="font-size: 14px;">Do you really want to Re-order these. This process cannot be undone.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary sky-button" data-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Delete</button> -->
+             <button type="button" style="color: whitesmoke;" class="btn btn-" data-dismiss="modal" (click)="confirm(re_orderdata)" class="delet-button-rad">Re-order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+    <!-- alert modal show  -->
+
+
+
+
+
+
+
+
+
+
+  <!--/ Nav Star /-->
+  
+  <!--/ Nav End /-->
+  <div id="new-order-wr" class="container-fluid p-0">  
+    <div class="row no-gutters align-items-center">
+      <div class="col-md-2">
+        <div id="order-nav-drop">
+          <div id="current-page" style="display:none;">New Order 
+          </div>
+          <ul class="side-tab">
+            <li class="new-order-tab"><a routerLink="/new_order"><h4>New Order</h4></a></li>
+            <li class="p-history-tab"><a routerLink="/purchase_history"><h4>Purchase History</h4></a></li>
+            <li class="o-status-tab"><a routerLink="/order_status"><h4>Order Status</h4></a></li>
+            <li class="a-setting-tab"><a routerLink="/change_password"><h4>Account Setting</h4></a></li>
+            <li class="financial-tab"><a routerLink="/financials"><h4>Financials</h4></a></li>
+            <li class="g-back-tab"><a routerLink="/dashboard"><h4>Go Back</h4></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-10 rside ">
+
+        <div id="step-1" class="step-wr step-form">
+
+        <div>
+          <h3 class="heading-3">Previous Orders</h3>
+        </div>
+
+        <div class="all-order clearfix">
+          <div *ngFor="let t of purchaseData, let i = index;" class="item-order1">
+            <img src="{{baseUrl}}image/{{t.image}}" style="width: 100% ; height:160px" >
+            <!-- <h3>{{t.category}} {{t.subcategory}}</h3> -->
+
+            <div class="clearfix">
+              <p>Order Number- {{t.orderid}}</p> 
+              <p>Total Billed amount - INR {{t.amount}} </p>
+
+              <p>Last Order Quantity - {{t.total}}</p>
+              <ul class="ul-1">
+                <li><a data-toggle="modal" data-target="#exampleModal" (click)="order_detail(t)" style="color: #fff;" >View Summary</a></li>
+
+              </ul>
+              <ul>    
+                <li><a data-toggle="modal" data-target="#exampleModal1" (click)="Re_order(t)" style="color: #fff;margin-left:  5px;" >Re-order</a></li>
+              </ul>
+            </div>
+            <!-- <p class="item-des-p">Product Discription</p> -->
+            <!-- <a class="repeat-btn text-center" href="#">Repeat Order</a> -->
+          </div>
+
+        
+        </div>
+
+        <!-- <div>
+          <h3>Purchase History</h3>
+        </div>
+
+        <div class="pur-history">
+          <ul>
+            <li>Order Number : #013</li>
+            <li>Delivered on : 10 October 2019</li>
+            <li>Total Billed amount : INR 61,000</li>
+            <li><a href="#">View Summary</a></li>
+          </ul>
+
+          <ul>
+            <li>Order Number : #013</li>
+            <li>Delivered on : 10 October 2019</li>
+            <li>Total Billed amount : INR 61,000</li>
+            <li><a href="#">View Summary</a></li>
+          </ul>
+        </div> -->
+
+       
+      </div>
+
+
+	
+		</div>
+    </div>
+  </div>
+
+  
+
+
+    <app-footer></app-footer>
+   
+
+    
+
+
+
+
+</div>

@@ -1,0 +1,67 @@
+.nav-lin {
+  color: white;
+}
+.nav-lin:hover {
+  color: #add1cd;
+}
+.overlay-mf {
+  background-color: #a4dad2;
+}
+.ico-circle {
+  color: #c5dacd;
+}
+.icon_hover:hover {
+  color: white !important;
+  background-color: #708289;
+}
+.icon_hover {
+  color: #708289 !important;
+  background-color: #c5dacd;
+}
+.button_display {
+  display: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px 0px 0px;
+  font-weight: 700;
+  font-size: 20px;
+}
+h4 {
+  margin: 0px;
+}
+h3 {
+  margin: 0px;
+}
+.close {
+  width: 50px;
+}
+
+.btn-popup {
+  background-color: #fff;
+  color: #000000;
+  padding-left: -70px;
+}
+.btn-popup:hover {
+  background-color: #fff;
+}
+.heading-delet {
+  margin-top: 0px;
+}
+.step-wr1 {
+  padding: 0px;
+}
+
+.od {
+  padding: 0px;
+}
+h1.total-no {
+  margin: 0px;
+}
+.product-btn {
+  cursor: pointer;
+}

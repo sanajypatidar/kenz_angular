@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1682px" height="1771px" viewBox="0 0 1682 1771" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>TallWavesRight2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F3F7F9" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="-2" y="-254" width="1946" height="2022"></rect>
+        <linearGradient x1="3.061617e-15%" y1="50%" x2="97.7977519%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#004FFF" offset="0%"></stop>
+            <stop stop-color="#001CA1" offset="2.49720982%"></stop>
+            <stop stop-color="#2D00F7" offset="39.2578125%"></stop>
+            <stop stop-color="#00E9FF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M1938.43899,1771 C1938.43899,1745.61519 2021.78977,1608.49238 1868.07457,1551.35384 C1689.19814,1484.86244 1571.15529,1330.81229 1223.40707,957.985638 C1073.64374,797.421877 708.913429,719.393238 413.460208,479.038663 C122.80706,242.589002 211.925971,-88.8425469 180.240102,-98.7894815 C-208.202188,-220.730594 -71.1152203,1428.24364 -32.9359536,1858.44388 C-26.6735101,1929.00848 1938.43899,2030.52602 1938.43899,1771 Z" id="path-5"></path>
+        <filter x="-0.2%" y="-0.2%" width="100.5%" height="100.5%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="4" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="2" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.345098039   0 0 0 0 0.423529412   0 0 0 0 0.478431373  0 0 0 0.3 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <pattern id="pattern-7" width="16.9411765" height="16.9411765" x="-104.941176" y="1218.05882" patternUnits="userSpaceOnUse">
+            <use xlink:href="#image-8" transform="scale(0.352941176,0.352941176)"></use>
+        </pattern>
+        <image id="image-8" width="48" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAV9JREFUaAXt2O0NgjAQBmBrt4DoDiawEHEQB1F3MK7BHKxR+2oKQfnseXCX0B/SEr3zucZIz+R57nZ+OOfuZVmeMcWaOEyWZVdjTBHicMW3aZpekMQnOyVJcqiq6hmSUq6Ig3iIyxnf+iRH7iSc8e1SleJCWGyvZsQboBlRA7QiWgCNiB+ANkQnQBOiF6AFMQjQgBgFSEdMAkhGTAZIRcwCSETMBkhDRAEkIaIBUhAkgAQEGbA2AgCDL0Edax2KrO8e3JCcCsDn10CgK/HQ2I0IZ+w9KucXBfo4mGJNHA79JfSBQhzO+FtfKFS567rEb2LrC3VV/vse507Uf2ScSQDiil8DOJOEHeFAtAAaET8AbYhOgCZEL0ALYhCgATEKkI6YBJCMmAyQipgFkIiYDZCGiAJIQkQDpCBIAAkIMmBtBAD/OMizPe+jQBh9j+JbX+hTn+a1r1K437wrfvYd/wV+UgblD/bGFgAAAABJRU5ErkJggg=="></image>
+        <linearGradient x1="78.2622834%" y1="49.5841799%" x2="14.9827736%" y2="49.5841742%" id="linearGradient-9">
+            <stop stop-color="#009AE5" offset="0%"></stop>
+            <stop stop-color="#004BFF" offset="32.1488361%"></stop>
+            <stop stop-color="#002DC2" offset="58.5220026%"></stop>
+            <stop stop-color="#0E00FF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M-183.742319,-198.636805 C-483.607829,-233.525312 -501.603629,401.267311 -237.729721,1705.74106 L865.000054,1733.921 C2558.95774,1812.94657 2042.5671,1768.51448 1973.4612,1454.60459 C1931.707,1264.93836 1398.39469,1117.87021 1214.80171,885.5 C1075.19774,708.805855 660.01589,617.601911 198.518354,311.910145 C16.4357571,191.30029 42.6961655,-10.5341045 -26.7947993,-65.2589371 C-41.0061597,-76.4505261 -168.961711,-196.917123 -183.742319,-198.636805 Z" id="path-10"></path>
+        <pattern id="pattern-11" width="16.9411765" height="16.9411765" x="-439.941176" y="-216.941176" patternUnits="userSpaceOnUse">
+            <use xlink:href="#image-12" transform="scale(0.352941176,0.352941176)"></use>
+        </pattern>
+        <image id="image-12" width="48" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAV9JREFUaAXt2O0NgjAQBmBrt4DoDiawEHEQB1F3MK7BHKxR+2oKQfnseXCX0B/SEr3zucZIz+R57nZ+OOfuZVmeMcWaOEyWZVdjTBHicMW3aZpekMQnOyVJcqiq6hmSUq6Ig3iIyxnf+iRH7iSc8e1SleJCWGyvZsQboBlRA7QiWgCNiB+ANkQnQBOiF6AFMQjQgBgFSEdMAkhGTAZIRcwCSETMBkhDRAEkIaIBUhAkgAQEGbA2AgCDL0Edax2KrO8e3JCcCsDn10CgK/HQ2I0IZ+w9KucXBfo4mGJNHA79JfSBQhzO+FtfKFS567rEb2LrC3VV/vse507Uf2ScSQDiil8DOJOEHeFAtAAaET8AbYhOgCZEL0ALYhCgATEKkI6YBJCMmAyQipgFkIiYDZCGiAJIQkQDpCBIAAkIMmBtBAD/OMizPe+jQBh9j+JbX+hTn+a1r1K437wrfvYd/wV+UgblD/bGFgAAAABJRU5ErkJggg=="></image>
+    </defs>
+    <g id="New-Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="TallWavesRight2">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+            <g id="Combined-Shape" mask="url(#mask-3)" transform="translate(936.667564, 916.673566) scale(-1, 1) translate(-936.667564, -916.673566) ">
+                <use fill-opacity="0.9" fill="url(#linearGradient-4)" fill-rule="evenodd" xlink:href="#path-5"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+            </g>
+            <path d="M2490,1333.22684 C2490,1333.22684 1863.66279,1618.9307 1136.02738,1386.14992 C408.391961,1153.36915 34.2522219,1234.07981 -56.7261758,1333.22684 C-147.704573,1432.37388 -11.236977,1768 -11.236977,1768 L2447.8556,1768 L2490,1333.22684 Z" id="Path-3" fill-opacity="0.150000006" fill="url(#pattern-7)" mask="url(#mask-3)" transform="translate(1201.000000, 1501.500000) scale(-1, 1) translate(-1201.000000, -1501.500000) "></path>
+            <g id="Path-3" mask="url(#mask-3)" transform="translate(839.000000, 784.035454) scale(-1, 1) translate(-839.000000, -784.035454) " fill-opacity="0.1">
+                <use fill="url(#linearGradient-9)" xlink:href="#path-10"></use>
+                <use fill="url(#pattern-11)" xlink:href="#path-10"></use>
+            </g>
+            <circle id="Circle" fill="#73D9FF" opacity="0.4" mask="url(#mask-3)" cx="140.5" cy="1103.5" r="80.5"></circle>
+            <circle id="Circle" fill="#004AFF" opacity="0.4" mask="url(#mask-3)" cx="211.5" cy="1143.5" r="53.5"></circle>
+        </g>
+    </g>
+</svg>

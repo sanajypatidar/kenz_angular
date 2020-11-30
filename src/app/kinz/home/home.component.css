@@ -1,0 +1,30 @@
+.nav-lin{
+    color: white
+  }
+  .nav-lin:hover{
+    color: #ADD1CD;
+  }
+  .overlay-mf{
+    background-color: #a4dad2;
+
+  }
+  .ico-circle{
+    color: #C5DACD
+  }
+  .icon_hover:hover{
+    color: white !important;
+     background-color: #708289;
+  }
+  .icon_hover{
+    color: #708289 !important;
+    background-color: #C5DACD;
+  }
+  .button_display{
+    display: none;
+  }
+  #dashboard-items-wr{
+        margin-top: 100px;
+  }
+  h2.new-order{
+   margin: 0px 0px 10px !important;
+ }

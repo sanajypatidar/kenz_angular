@@ -1,0 +1,269 @@
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.centered {
+  position: absolute;
+  left: 36%;
+  transform: translate(-50%, -50%);
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+  margin-left: 113px;
+  width: 100%;
+}
+.button-green {
+  width: 115px;
+  font-size: 15px;
+  color: #fff;
+  background-color: green;
+}
+.edit-button {
+  color: whitesmoke;
+  width: 60px;
+  font-size: 17px;
+  margin-left: 0px;
+  height: 33px;
+  padding: 5px;
+  border-color: transparent;
+}
+.red-button {
+  width: 70px;
+  font-size: 17px;
+  height: 33px;
+  padding: 5px;
+  border-color: transparent;
+}
+.heading-5 {
+  font-family: proximanova-bold;
+  margin: 0px;
+  font-size: 20px;
+}
+.button-close {
+  color: #000;
+  background-color: #fff !important;
+  border-color: transparent;
+  width: 25px;
+  padding-right: 30px;
+}
+.sky-button {
+  width: 60px;
+  font-size: 15px;
+  color: #000;
+  background-color: #dbe7f3;
+  border-radius: 5px;
+  border-color: transparent;
+  padding: 5px 5px 5px 5px;
+  height: 30px;
+}
+.delet-button-rad {
+  color: whitesmoke;
+  width: 60px;
+  font-size: 15px;
+  background-color: #ef2a2a;
+  border-color: transparent;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  height: 30px;
+}
+.catogery {
+  margin-left: 230px;
+}
+.add {
+  margin-left: 619px;
+}
+@media only screen and (min-device-width: 220px) and (max-device-width: 480px) {
+  .catogery {
+    margin-left: 116px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 91px 14px 0px;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .add {
+    margin-left: 0;
+    padding-right: 6px;
+  }
+  .container {
+    width: 150px;
+  }
+  .hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 2px;
+    padding: 0 22px;
+    margin-left: 48px;
+    width: 100%;
+  }
+  .table-2 {
+    margin-left: 22px;
+  }
+  .table td,
+  .table th {
+    padding: 0 5px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .catogery {
+    margin-left: 131px;
+  }
+  .add {
+    margin-left: 0;
+    padding-right: 9px;
+  }
+  .hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    margin-left: 78px;
+    width: 100%;
+  }
+  .table-2 {
+    margin-left: 66px;
+  }
+}
+@media only screen and (min-device-width: 641px) and (max-device-width: 768px) {
+  .catogery {
+    margin-left: 131px;
+  }
+  .add {
+    margin-left: 386px;
+    padding-right: 9px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 64px 17px 0px;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    margin-left: 78px;
+    width: 100%;
+  }
+  .table-2 {
+    margin-left: 66px;
+  }
+}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 800px) {
+  .catogery {
+    margin-left: 131px;
+  }
+  .add {
+    margin-left: 0;
+    padding-right: 9px;
+    margin: 58px 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 64px 17px 0px;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    margin-left: 78px;
+    width: 100%;
+  }
+  .table-2 {
+    margin-left: 66px;
+  }
+}
+@media only screen and (min-device-width: 801px) and (max-device-width: 1024px) {
+  .catogery {
+    margin-left: 131px;
+  }
+  .add {
+    margin-left: 0;
+    padding-right: 0;
+    margin: 58px 15px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 64px 17px 0px;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    margin-left: 78px;
+    width: 100%;
+  }
+  .table-2 {
+    margin-left: 66px;
+  }
+}
